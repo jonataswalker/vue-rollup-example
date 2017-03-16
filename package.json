@@ -1,0 +1,40 @@
+{
+  "name": "vue-rollup-example",
+  "version": "0.0.1",
+  "repository": "https://github.com/jonataswalker/vue-rollup-example",
+  "author": "Jonatas Walker <jonataswalker@gmail.com>",
+  "license": "MIT",
+  "main": "dist/vue-rollup-example.cjs.js",
+  "module": "dist/vue-rollup-example.umd.js",
+  "keywords": [
+    "boilerplate",
+    "vue",
+    "rollup"
+  ],
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "lint": "eslint ./*.js --ext .js,.vue src --cache",
+    "build": "npm run lint && rollup -c"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-jwalker": "^2.0.0",
+    "eslint-plugin-html": "^2.0.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-vue": "^2.3.0"
+  },
+  "dependencies": {
+    "vue": "^2.2.4"
+  },
+  "eslintConfig": {
+    "extends": "jwalker",
+    "plugins": [
+      "html"
+    ]
+  }
+}
