@@ -1,21 +1,43 @@
 import vue from 'rollup-plugin-vue';
-import resolve from 'rollup-plugin-node-resolve';
 import buble from 'rollup-plugin-buble';
+import eslint from 'rollup-plugin-eslint';
+import bundleSize from 'rollup-plugin-filesize';
+import resolve from 'rollup-plugin-node-resolve';
+import pkg from './package.json';
 
-const pkg = require('./package.json');
 const external = Object.keys(pkg.dependencies);
+const extensions = ['.js', '.vue'];
+const isProduction = !process.env.ROLLUP_WATCH;
+const globals = { vue: 'Vue' };
+
+const lintOpts = {
+  extensions,
+  exclude: ['**/*.json'],
+  cache: true,
+  throwOnError: true
+};
+
+const plugins = [
+  resolve(),
+  eslint(lintOpts),
+  bundleSize(),
+  vue({
+    template: {
+      isProduction,
+      compilerOptions: { preserveWhitespace: false }
+    },
+    css: true,
+  }),
+  buble()
+];
 
 export default {
   external,
-  globals: { vue: 'Vue' },
-  entry: 'src/entry.js',
-  plugins: [
-    resolve(),
-    vue({ compileTemplate: true, css: true }),
-    buble()
-  ],
-  targets: [
-    { dest: 'dist/vue-rollup-example.cjs.js', format: 'cjs' },
-    { dest: 'dist/vue-rollup-example.umd.js', format: 'umd' }
-  ]
+  plugins,
+  input: 'src/entry.js',
+  output: {
+    globals,
+    file: 'dist/bundle.js',
+    format: 'umd'
+  },
 };

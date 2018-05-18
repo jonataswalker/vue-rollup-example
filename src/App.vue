@@ -1,15 +1,15 @@
 <template>
   <div id="app" class="layout">
     <header>
-      <app-header title="Boilerplate App"></app-header>
+      <app-header title="Boilerplate App" />
     </header>
     <div class="body">
       <main class="content">
-        <app-body></app-body>
+        <app-body />
       </main>
     </div>
     <footer>
-      <app-footer></app-footer>
+      <app-footer />
     </footer>
   </div>
 </template>

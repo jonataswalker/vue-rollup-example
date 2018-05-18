@@ -9,8 +9,10 @@
 </style>
 
 <script>
-  export default {
-    name: 'AppHeader',
-    props: ['title']
-  };
+export default {
+  name: 'AppHeader',
+  props: {
+    title: { type: String, default: '' }
+  }
+};
 </script>

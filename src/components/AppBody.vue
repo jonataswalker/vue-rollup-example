@@ -1,5 +1,7 @@
 <template>
-  <div class="view">Some body content!</div>
+  <div class="view">
+    Some body content!
+  </div>
 </template>
 
 <style>
@@ -9,7 +11,7 @@
 </style>
 
 <script>
-  export default {
-    name: 'AppBody'
-  };
+export default {
+  name: 'AppBody'
+};
 </script>
