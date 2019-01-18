@@ -1,6 +1,6 @@
 import vue from 'rollup-plugin-vue';
 import buble from 'rollup-plugin-buble';
-import eslint from 'rollup-plugin-eslint';
+import { eslint } from 'rollup-plugin-eslint';
 import bundleSize from 'rollup-plugin-filesize';
 import resolve from 'rollup-plugin-node-resolve';
 import pkg from './package.json';
@@ -26,7 +26,7 @@ const plugins = [
       isProduction,
       compilerOptions: { preserveWhitespace: false }
     },
-    css: true,
+    css: true
   }),
   buble()
 ];
@@ -39,5 +39,5 @@ export default {
     globals,
     file: 'dist/bundle.js',
     format: 'umd'
-  },
+  }
 };

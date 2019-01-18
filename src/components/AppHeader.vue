@@ -1,11 +1,13 @@
 <template>
-  <h1 class="header">{{ title }}</h1>
+  <h1 class="header">
+    {{ title }}
+  </h1>
 </template>
 
 <style>
-  .header {
-    padding: 10px 0;
-  }
+.header {
+  padding: 10px 0;
+}
 </style>
 
 <script>

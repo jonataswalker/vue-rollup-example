@@ -5,9 +5,9 @@
 </template>
 
 <style>
-  .view {
-    color: teal;
-  }
+.view {
+  color: teal;
+}
 </style>
 
 <script>
