@@ -117,7 +117,7 @@
       return addStyle(id, style);
     };
   }
-  var HEAD = document.head || document.getElementsByTagName('head')[0];
+  var HEAD;
   var styles = {};
 
   function addStyle(id, css) {
@@ -143,6 +143,11 @@
         style.element = document.createElement('style');
         style.element.type = 'text/css';
         if (css.media) { style.element.setAttribute('media', css.media); }
+
+        if (HEAD === undefined) {
+          HEAD = document.head || document.getElementsByTagName('head')[0];
+        }
+
         HEAD.appendChild(style.element);
       }
 
