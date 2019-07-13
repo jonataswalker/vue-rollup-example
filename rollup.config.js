@@ -1,4 +1,5 @@
 import vue from 'rollup-plugin-vue';
+import commonjs from 'rollup-plugin-commonjs';
 import buble from 'rollup-plugin-buble';
 import { eslint } from 'rollup-plugin-eslint';
 import bundleSize from 'rollup-plugin-filesize';
@@ -21,6 +22,7 @@ const plugins = [
   resolve(),
   eslint(lintOpts),
   bundleSize(),
+  commonjs(),
   vue({
     template: {
       isProduction,
