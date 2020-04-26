@@ -1,0 +1,106 @@
+---
+root: true
+env:
+  node: true
+  browser: true
+  es6: true
+parserOptions:
+  parser: babel-eslint
+  sourceType: module
+  ecmaVersion: 2020
+  ecmaFeatures:
+    impliedStrict: true
+extends:
+  - eslint:recommended
+  - hardcore
+  - hardcore/node
+  - plugin:vue/recommended
+  - plugin:prettier-vue/recommended
+  - prettier/vue
+rules:
+  no-console: 0
+  no-process-env: 0
+  default-case: 0
+  no-sync: 0
+  no-magic-numbers: 0
+  no-inline-comments: 0
+  line-comment-position: 0
+  max-statements: 0
+  require-atomic-updates: 0
+  no-shadow:
+    - error
+    - builtinGlobals: true
+      allow:
+        - name
+        - status
+        - event
+  no-unused-vars:
+    - error
+    - args: none
+      ignoreRestSiblings: true
+      vars: local
+      caughtErrors: none
+  no-unused-expressions:
+    - error
+    - allowTernary: true
+      allowShortCircuit: true
+  id-match:
+    - error
+    - (^[A-Za-z]+(?:[A-Z][a-z]*)*\d*$)|(^[A-Z]+(_[A-Z]+)*(_\d$)*$)|(^(_|\$)$)
+    - ignoreDestructuring: true
+  id-length:
+    - error
+    - exceptions:
+        - h
+        - t
+        - i
+        - k
+        - e
+        - a
+        - b
+  consistent-return:
+    - error
+    - treatUndefinedAsUnspecified: true
+  no-param-reassign:
+    - error
+    - props: false
+  func-style:
+    - error
+    - declaration
+    - allowArrowFunctions: true
+  import/group-exports: 0
+  import/no-unused-modules: 0
+  import/prefer-default-export: 0
+  import/max-dependencies: 0
+  import/no-extraneous-dependencies: 0
+  import/extensions:
+    - error
+    - always
+    - ignorePackages: true
+  import/no-anonymous-default-export:
+    - error
+    - allowArray: true
+      allowArrowFunction: true
+      allowObject: true
+  promise/avoid-new: 0
+  promise/always-return: 0
+  node/no-process-env: 0
+  node/no-sync: 0
+  node/no-unpublished-import: 0
+  vue/html-self-closing:
+    - 2
+    - html:
+        void: any
+  vue/max-attributes-per-line:
+    - 2
+    - singleline: 10
+      multiline:
+        max: 1
+        allowFirstLine: false
+  vue/component-tags-order:
+    - 2
+    - order:
+        - docs
+        - template
+        - script
+        - style
