@@ -8,4 +8,21 @@ npm install
 npm run build
 ```
 
-Open `index.html` in browser.
+
+# Tools (best of worlds?)
+
+&#8594; [Rollup](http://rollupjs.org)
+
+&#8594; [Vue](https://vuejs.org)
+
+&#8594; [ESLint](https://eslint.org)
+
+&#8594; [Prettier](https://prettier.io)
+
+&#8594; [Browsersync](https://browsersync.io)
+
+&#8594; [Ora](https://github.com/sindresorhus/ora)
+
+&#8594; [RxJS](https://rxjs-dev.firebaseapp.com)
+
+&#8594; and a bunch of others - check `devDependencies`
