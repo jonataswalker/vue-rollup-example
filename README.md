@@ -9,6 +9,9 @@ npm install
 npm run dev
 ```
 
+![cli anim](https://raw.githubusercontent.com/jonataswalker/vue-rollup-example/master/cli.gif)
+
+
 # Tools (best of worlds?)
 
 &#8594; [Rollup](http://rollupjs.org)
