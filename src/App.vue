@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="layout">
+  <div>
     <header>
-      <app-header title="Boilerplate App" />
+      <app-header title="Vue App" />
     </header>
     <div class="body">
       <main class="content">
@@ -21,6 +21,6 @@ import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
-  components: { AppHeader, AppBody, AppFooter }
+  components: { AppHeader, AppBody, AppFooter },
 };
 </script>
