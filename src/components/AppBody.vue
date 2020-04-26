@@ -1,17 +1,15 @@
 <template>
-  <div class="view">
-    Some body content!
-  </div>
+  <div class="view">Some body content!</div>
 </template>
+
+<script>
+export default {
+  name: 'AppBody',
+};
+</script>
 
 <style>
 .view {
   color: teal;
 }
 </style>
-
-<script>
-export default {
-  name: 'AppBody'
-};
-</script>

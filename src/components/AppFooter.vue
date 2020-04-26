@@ -1,8 +1,12 @@
 <template>
-  <div class="footer">
-    support@support.com
-  </div>
+  <div class="footer">support@support.com</div>
 </template>
+
+<script>
+export default {
+  name: 'AppFooter',
+};
+</script>
 
 <style>
 .footer {
@@ -11,9 +15,3 @@
   border: 1px solid #333;
 }
 </style>
-
-<script>
-export default {
-  name: 'AppFooter'
-};
-</script>
