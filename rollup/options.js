@@ -6,7 +6,7 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import buble from '@rollup/plugin-buble';
 import replace from '@rollup/plugin-replace';
-import terser from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 import vue from 'rollup-plugin-vue';
 
 const filename = fileURLToPath(import.meta.url);
@@ -27,10 +27,10 @@ export function createOnWarn(subscriber) {
   };
 }
 
-export function getInputOptions(env, minify = true) {
+export function getInputOptions(environment, minify = true) {
   const plugins = [
     vue(),
-    replace({ 'process.env.NODE_ENV': JSON.stringify(env) }),
+    replace({ 'process.env.NODE_ENV': JSON.stringify(environment) }),
     nodeResolve({ extensions: ['.js', '.vue'], browser: true, preferBuiltins: true }),
     commonjs(),
     buble({ target: { chrome: 70 } }),
